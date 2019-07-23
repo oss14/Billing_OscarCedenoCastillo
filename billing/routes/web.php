@@ -25,3 +25,10 @@ Route:: resource('users', 'UserController');
 
 //Rutas de Servicio de Productos
 Route::resource('products', 'ProductController');
+
+//Rutas de Servicio de Facturas
+Route::resource('bills', 'BillController');
+
+Route::get('/getBills', 'BillControler@getBills');
+Route::get('/getBillsByUser', 'BillController@getBillsByUser');
+Route::get('/getBillsByProduct', 'BillController@getBillsByProduct');

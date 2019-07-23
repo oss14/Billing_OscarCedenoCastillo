@@ -15,8 +15,9 @@ class TablaDeFacturas extends Migration
     {
         Schema::create('tbl_bill', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_bill');
-            $table->bigInteger('id_user');
+            $table->bigInteger('id_bill')->unsigned();
+            $table->bigInteger('id_user')->unsigned();
+            $table->float('total_bill', 8, 2);
             $table->timestamps();
         });
     }
