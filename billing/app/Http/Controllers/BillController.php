@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Bill;
 
 class BillController extends Controller
@@ -85,20 +86,4 @@ class BillController extends Controller
         //
     }
 
-
-    
-    //Funcion de obtener facturas 
-    public function getBills(){
-
-    }
-
-    //Funcion de obtener facturas por usuario
-    public function getBillsByUser(){
-
-    }
-
-    //Funcion de obtener facturas por producto
-    public function getBillsByProduct(){
-
-    }
 }

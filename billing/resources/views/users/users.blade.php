@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.mytemplate')
 
 @section('main')
 
@@ -13,17 +13,29 @@
 
 <div class="row">
 <div class="col-sm-12">
-    <h1 class="display-3">Usuarios</h1>    
-  <table class="table table-striped">
-    <thead>
+  
+  <div class="d-flex justify-content-center">
+    <h1 class="display-3">Usuarios</h1>
+  </div>
+    
+
+    <div >
+      <a class="btn btn-primary" href="/home"> Regresar a Home </a>
+    </div>
+    
+    <br>
+  
+    <table class="table table-striped">
+      <thead>
         <tr>
           <td>ID</td>
           <td>Nombre del Usuario</td>
           <td>Correo del Usuario</td>
           <td colspan = 2>Funciones a Ejecutar</td>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+    
+      <tbody>
         @foreach($users as $user)
         <tr>
             <td>{{$user->id}}</td>

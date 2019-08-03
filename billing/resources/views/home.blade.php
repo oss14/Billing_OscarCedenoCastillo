@@ -49,7 +49,7 @@
     <div class="carousel-item">
       <img src="https://images.wallpaperscraft.com/image/table_paper_pens_writing_67592_1680x1050.jpg" alt="Facturas" width="1100" height="500">
       <div class="carousel-caption">
-        <a class="btn btn-primary btn-lg">Facturas</a>
+        <a class="btn btn-primary btn-lg" href="/bills">Facturas</a>
       </div>   
     </div>
   </div>

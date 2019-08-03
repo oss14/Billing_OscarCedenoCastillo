@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.mytemplate')
 
 @section('main')
 
@@ -17,6 +17,10 @@
 <div class="text-center">
   <h1 class="display-3">Productos</h1>
 </div>     
+
+    <div >
+    <a class="btn btn-primary" href="/home"> Regresar a Home </a>
+    </div>
 
     <div class="text-right">
     <a style="margin: 19px;" href="{{ route('products.create')}}" class="btn btn-primary">Nuevo Producto</a>

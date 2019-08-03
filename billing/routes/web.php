@@ -13,10 +13,16 @@
 Auth::routes();
 
 Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::get('/home',function(){
     return view('home');
 });
 
-
+Route::get('/bills', function(){
+    return view('bills.bills');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -29,6 +35,13 @@ Route::resource('products', 'ProductController');
 //Rutas de Servicio de Facturas
 Route::resource('bills', 'BillController');
 
-Route::get('/getBills', 'BillControler@getBills');
-Route::get('/getBillsByUser', 'BillController@getBillsByUser');
-Route::get('/getBillsByProduct', 'BillController@getBillsByProduct');
+
+//Rutas de Servicio de Facturación 
+//Route::post('/getBills', 'JoinController@getBills');
+Route::get('/viewBills', 'JoinController@getBills');
+
+//Route::post('/getBillsByUser', 'JoinController@getBillsByUser');
+Route::get('/viewBillsByUser', 'JoinController@getBillsByUser');
+
+//Route::post('/getBillsByProduct', 'JoinController@getBillsByProduct');
+Route::get('/viewBillsbyProduct','JoinController@getBillsByProduct');
